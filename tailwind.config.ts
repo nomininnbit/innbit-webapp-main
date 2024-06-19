@@ -23,7 +23,7 @@ const config = {
         fill: {
           1: "rgba(255, 255, 255, 0.10)",
         },
-        innbitRed: "#E3000F",
+        bankGradient: "#0179FE",
         indigo: {
           500: "#6172F3",
           700: "#3538CD",
@@ -105,15 +105,5 @@ const config = {
   },
   plugins: [require("tailwindcss-animate")],
 } satisfies Config;
-module.exports = {
-  purge: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
-  darkMode: false, // or 'media' or 'class'
-  theme: {
-    extend: {},
-  },
-  variants: {
-    extend: {},
-  },
-  plugins: [],
-}
+
 export default config;
