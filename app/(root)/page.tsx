@@ -1,8 +1,18 @@
 import React from 'react'
+import HeaderBox from '@/components/HeaderBox'
 
 const Dashboard = () => {
+  const loggedIn = { firstName: 'Max'};
   return (
-    <div>Dashboard</div>
+    <section className='home'>
+      <div className='home-content'>
+        <header className='home-header'>
+          <HeaderBox 
+          />
+        </header>
+      </div>
+
+    </section>
   )
 }
 
