@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation'; // Import usePathname
+import { sidebarLinks } from '@/constants';
 
 const HeaderBox = () => {
   const [language, setLanguage] = useState('English');
@@ -26,12 +28,13 @@ const HeaderBox = () => {
   const toggleNotifications = () => {
     setIsNotificationsOpen(!isNotificationsOpen);
   };
+  const pathname = usePathname(); // Get the current pathname
 
   return (
-    <nav className="flex items-center justify-between mt-[-20px]">
+    <nav className="flex items-center justify-between mt-[-20px] border-b border-gray-200 pb-4 w-full"> {/* Added w-full */}
       <div className="flex items-center">
         <Link href="/" className="text-xl font-bold">
-          Dashboard
+          {sidebarLinks.find(link => link.route === pathname)?.label || 'Dashboard'}
         </Link>
       </div>
       <div className="flex items-center space-x-4">
@@ -40,6 +43,7 @@ const HeaderBox = () => {
             aria-label="Language"
             className="p-2 rounded-full border border-gray-300 flex items-center"
             onClick={toggleDropdown}
+            title="Select Language" // Mouse hover description
           >
             <Image src="/icons/language.svg" alt="Language" width={24} height={24} />
             <span className="ml-2">{language}</span>
@@ -65,6 +69,7 @@ const HeaderBox = () => {
           aria-label="Dark Mode"
           className={`p-2 rounded-full border ${isDarkMode ? 'bg-gray-800' : 'border-gray-300'}`}
           onClick={toggleDarkMode}
+          title="Toggle Dark Mode" // Mouse hover description
         >
           <Image
             src={isDarkMode ? "/icons/lightmode.svg" : "/icons/darkmode.svg"}
@@ -79,6 +84,7 @@ const HeaderBox = () => {
             aria-label="Notifications"
             className="p-2 rounded-full border border-gray-300"
             onClick={toggleNotifications}
+            title="View Notifications" // Mouse hover description
           >
             <Image src="/icons/notification.svg" alt="Notifications" width={24} height={24} />
             <span className="absolute top-0 right-0 block h-2 w-2 rounded-full ring-2 ring-white bg-red-500"></span>
@@ -97,6 +103,7 @@ const HeaderBox = () => {
           )}
         </div>
       </div>
+      
     </nav>
   );
 };

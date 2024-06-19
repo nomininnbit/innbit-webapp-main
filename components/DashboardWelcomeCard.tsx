@@ -9,7 +9,10 @@ const DashboardWelcomeCard = () => {
           Flexible IoT Product Tracking Platform for All Business Sectors
           Our innbitory platform creates added value for your daily product management. We combine customized printed sensor technology with an intuitive management system.
         </p>
-        <button className="bg-red-600 text-white py-2 px-4 rounded shadow hover:bg-red-700 transition duration-300">
+        <button
+          className="bg-red-600 text-white py-2 px-4 rounded shadow hover:bg-red-700 transition duration-300"
+          title="Here we can add texts, example: Click to view more information" // Mouse hover information
+        >
           View More
         </button>
       </div>

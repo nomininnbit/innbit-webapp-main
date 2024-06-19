@@ -23,7 +23,8 @@ const Sidebar = ({ user }: SidebarProps) => {
         </Link>
 
         {/* User Profile Section */}
-        <div className='flex items-center gap-4 p-3 bg-gray-100 rounded-md mb-4'>
+        <div className='flex items-center cursor-pointer gap-4 p-3 bg-gray-100 rounded-md mb-4'>
+        <Link href='/profile'>
           <Image
             src={'/icons/defaultProfile.png'}
             width={40}
@@ -31,10 +32,13 @@ const Sidebar = ({ user }: SidebarProps) => {
             alt='User Profile'
             className='rounded-full'
           />
+        </Link>
+        <Link href='/profile'>
           <div>
             <p className='font-semibold text-gray-600'>Erika Musterfrau</p>
             <p className='text-sm text-gray-600'>user@test.com</p>
           </div>
+        </Link>
         </div>
 
         {sidebarLinks.map((item) => {

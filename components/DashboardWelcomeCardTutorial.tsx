@@ -9,8 +9,11 @@ const DashboardWelcomeCardTutorial = () => {
         "Ready to set up your new innbit Smart Box? It's easy! Go to the 'Boxes' page, click 'Add Box,' and follow the simple instructions. 
         Need help? Check out the 'Help Center'!"
         </p>
-        <button className="bg-red-600 text-white py-2 px-4 rounded shadow hover:bg-red-700 transition duration-300">
-        Go to Tutorial
+        <button
+          className="bg-red-600 text-white py-2 px-4 rounded shadow hover:bg-red-700 transition duration-300"
+          title="Here we can add texts, example: Click to view more information" // Mouse hover information
+        >
+          Go to Tutorial
         </button>
       </div>
     </section>
