@@ -1,5 +1,7 @@
 import React from 'react'
 import HeaderBox from '@/components/HeaderBox'
+import DashboardWelcomeCard from '@/components/DashboardWelcomeCard';
+import DashboardWelcomeCardTutorial from '@/components/DashboardWelcomeCardTutorial';
 
 const Dashboard = () => {
   const loggedIn = { firstName: 'Max'};
@@ -9,9 +11,13 @@ const Dashboard = () => {
         <header className='home-header'>
           <HeaderBox 
           />
-        </header>
-      </div>
 
+        </header>
+        <main className="flex space-x-4">
+        <DashboardWelcomeCard />
+        <DashboardWelcomeCardTutorial />
+        </main>
+      </div>
     </section>
   )
 }
