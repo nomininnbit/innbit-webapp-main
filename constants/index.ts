@@ -15,7 +15,7 @@ export const sidebarLinks = [
     label: "Retailer",
   },
   {
-    imgURL: "/product-catalog.svg",
+    imgURL: "/icons/product-catalog.svg",
     route: "/product-catalog",
     label: "Product Catalog",
   },

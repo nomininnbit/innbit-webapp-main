@@ -29,14 +29,14 @@ import Image from 'next/image';
 
 const HeaderBox = () => {
   return (
-    <nav className="flex items-center justify-between p-4">
+    <nav className="flex items-center justify-between">
       <div className="flex items-center">
         <Link href="/" className="text-xl font-bold">
           Dashboard
         </Link>
       </div>
       <div className="flex items-center space-x-4">
-        <button aria-label="Notifications">
+        <button aria-label="Notifications"> Notification
         </button>
         <button aria-label="Refresh">
         </button>
