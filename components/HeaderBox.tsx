@@ -33,7 +33,7 @@ const HeaderBox = () => {
   return (
     <nav className="flex items-center justify-between mt-[-20px] border-b border-gray-200 pb-4 w-full"> {/* Added w-full */}
       <div className="flex items-center">
-        <Link href="/" className="text-xl font-bold">
+        <Link href="/" className="text-3xl">
           {sidebarLinks.find(link => link.route === pathname)?.label || 'Dashboard'}
         </Link>
       </div>
