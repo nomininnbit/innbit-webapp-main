@@ -123,7 +123,7 @@ const UserProfile = () => {
   };
 
   return (
-      <div className="max-w-full mx-auto p-4 bg-white border border-gray-200 rounded-lg">
+      <div className="w-full mx-auto p-4 bg-white border border-gray-200 rounded-lg">
       <h2 className="text-2xl font-bold mb-4">Edit Profile</h2>
 
       <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -215,7 +215,7 @@ const UserProfile = () => {
           />
           {errors.country && <p className="text-red-500 text-xs mt-1">{errors.country}</p>}
         </div>
-        <div className="mb-4">
+        <div className="mb-4 ">
           <label className="block text-sm font-medium text-gray-700">Profile Picture</label>
           <input
             type="file"
@@ -234,16 +234,13 @@ const UserProfile = () => {
             className="mt-1 block w-full px-3 py-2 border border-gray-300 bg-white rounded-md focus:outline-none focus:ring-innbitRed focus:border-innbitRed sm:text-sm"
           >
             <option value="English">English</option>
-            <option value="Spanish">Spanish</option>
-            <option value="French">French</option>
             <option value="German">German</option>
-            <option value="Chinese">Chinese</option>
           </select>
         </div>
         <div className="mt-6 col-span-1 md:col-span-2">
           <button
             type="submit"
-            className="w-full px-4 py-2 bg-innbitRed text-white font-semibold rounded-md hover:bg-innbitRed-700 focus:outline-none focus:ring-2 focus:ring-innbitRed"
+            className="w-40 px-4 py-2 bg-innbitRed text-white font-semibold rounded-md hover:bg-innbitRed-700 focus:outline-none focus:ring-2 focus:ring-innbitRed"
           >
             Save Profile
           </button>

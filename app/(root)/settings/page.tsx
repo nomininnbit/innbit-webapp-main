@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderBox from '@/components/HeaderBox'
+import PageSettings from '@/components/PageSettings'
 
 const Settings = () => {
   return (
@@ -9,9 +10,10 @@ const Settings = () => {
         <HeaderBox 
         />
       </header>
-      <main className="flex space-x-4">
-
-      </main>
+        <main className="flex space-x-4">
+          <PageSettings
+          />
+        </main>
     </div>
   </section>
   )
