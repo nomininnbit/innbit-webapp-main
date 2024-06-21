@@ -36,7 +36,7 @@ const Dashboard = () => {
             count={0}
             total={0}
             name="Your Product Name"
-            info="retailerName\n0 available of 0"
+            info="retailerName"
             buttonLabel="Add new Product"
           />
         </div>

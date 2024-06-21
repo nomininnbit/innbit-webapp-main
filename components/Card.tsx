@@ -26,9 +26,9 @@ const Card: React.FC<CardProps> = ({ title, subtitle, count, total, name, info, 
       </div>
       <div className="flex justify-between items-center bg-red-100 rounded-lg p-4 w-full">
         <div className="flex items-center">
-          <div className="w-10 h-10 bg-white rounded-full mr-4"></div>
+          <div className="w-20 h-20 bg-white rounded-full mr-4"></div>
           <div>
-            <p>{name}</p>
+            <p className='font-bold'>{name}</p>
             <p>{info}</p>
           </div>
         </div>

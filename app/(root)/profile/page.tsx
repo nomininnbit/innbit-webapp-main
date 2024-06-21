@@ -1,5 +1,7 @@
 import React from 'react'
 import HeaderBox from '@/components/HeaderBox'
+import UserProfile from '@/components/UserProfile'
+import { useState } from 'react'
 
 const Profile = () => {
   return (
@@ -10,7 +12,7 @@ const Profile = () => {
         />
       </header>
       <main className="flex space-x-4">
-
+        <UserProfile />
       </main>
     </div>
   </section>
