@@ -1,7 +1,7 @@
-// components/Card.tsx
+// components/DashboardCard.tsx
 import React from 'react';
 
-interface CardProps {
+interface DashboardCardProps {
   title: string;
   subtitle: string;
   count: number;
@@ -11,7 +11,7 @@ interface CardProps {
   buttonLabel: string;
 }
 
-const Card: React.FC<CardProps> = ({ title, subtitle, count, total, name, info, buttonLabel }) => {
+const DashboardCard: React.FC<DashboardCardProps> = ({ title, subtitle, count, total, name, info, buttonLabel }) => {
   return (
     <div className="bg-white border border-gray-200 rounded-lg p-4 my-4 mx-auto flex justify-between w-auto gap-8">
       <div className="mb-4 flex justify-between w-full">
@@ -40,4 +40,4 @@ const Card: React.FC<CardProps> = ({ title, subtitle, count, total, name, info, 
   );
 };
 
-export default Card;
+export default DashboardCard;

@@ -23,7 +23,7 @@ const Sidebar = ({ user }: SidebarProps) => {
         </Link>
 
         {/* User Profile Section */}
-        <div className='flex items-center cursor-pointer gap-4 p-3 bg-gray-100 rounded-md mb-4'>
+        <div className='flex items-center cursor-pointer gap-4 p-3 hover:bg-gray-100 rounded-md mb-4'>
         <Link href='/profile'>
           <Image
             src={'/icons/defaultProfile.png'}
@@ -44,7 +44,7 @@ const Sidebar = ({ user }: SidebarProps) => {
         {sidebarLinks.map((item) => {
           const isActive = pathname === item.route || pathname.startsWith(`${item.route}/`)
           return (
-            <Link href={item.route} key={item.label} className={cn('sidebar-link', { 'bg-innbitRed': isActive })}>
+            <Link href={item.route} key={item.label} className={cn('sidebar-link hover:bg-gray-100', { 'bg-innbitRed hover:bg-red-700': isActive })}>
               <div className='relative size-6'>
                 <Image
                   src={item.imgURL}

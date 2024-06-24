@@ -2,7 +2,7 @@ import React from 'react';
 import HeaderBox from '@/components/HeaderBox';
 import DashboardWelcomeCard from '@/components/DashboardWelcomeCard';
 import DashboardWelcomeCardTutorial from '@/components/DashboardWelcomeCardTutorial';
-import Card from '@/components/Card';
+import DashboardCard from '@/components/DashboardCard';
 
 const Dashboard = () => {
   const loggedIn = { firstName: 'Max' };
@@ -19,7 +19,7 @@ const Dashboard = () => {
         </main>
 
         <div className="w-full">
-          <Card
+          <DashboardCard
             title="My Retailers"
             subtitle="Total Retailers"
             count={0}
@@ -30,7 +30,7 @@ const Dashboard = () => {
           />
         </div>
         <div className="w-full">
-          <Card
+          <DashboardCard
             title="My Products"
             subtitle="Summary of My Products"
             count={0}
@@ -41,7 +41,7 @@ const Dashboard = () => {
           />
         </div>
         <div className="w-full">
-          <Card
+          <DashboardCard
             title="My Boxes"
             subtitle="Total Boxes"
             count={0}

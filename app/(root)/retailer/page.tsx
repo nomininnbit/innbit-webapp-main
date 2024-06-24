@@ -1,5 +1,6 @@
 import React from 'react'
 import HeaderBox from '@/components/HeaderBox'
+import RetailerCard from '@/components/RetailerCard'
 
 const Retailer = () => {
   return (
@@ -9,7 +10,9 @@ const Retailer = () => {
         <HeaderBox 
         />
       </header>
-      <main className="flex space-x-4">
+        <main className="flex space-x-4">
+          <RetailerCard
+          />
 
       </main>
     </div>
