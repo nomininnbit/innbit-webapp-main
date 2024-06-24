@@ -84,7 +84,7 @@ const UserProfile = () => {
     const { name, value } = e.target;
     setProfile({
       ...profile,
-      [name]: value as string,
+      [name as keyof Profile]: value as string,
     });
   };
 
@@ -121,8 +121,10 @@ const UserProfile = () => {
             key={field.name}
             label={field.label}
             name={field.name}
+            value={field.name === 'profilePicture' ? '' : (profile[field.name as keyof Omit<Profile, 'profilePicture'>] || '')}
             onChange={handleChange}
-            disabled={!isEditing} value={''}          />
+            disabled={!isEditing}
+          />
         ))}
 
         <div className="mt-6 col-span-1 md:col-span-2">
