@@ -1,5 +1,7 @@
 import React from 'react'
 import HeaderBox from '@/components/HeaderBox'
+import FaqPage from '@/components/FaqPage'
+import SupportTicketsPage from '@/components/SupportTicketsPage'
 
 const helpCenter = () => {
   return (
@@ -9,7 +11,10 @@ const helpCenter = () => {
         <HeaderBox 
         />
       </header>
-      <main className="flex space-x-4">
+        <main className="flex space-x-4">
+          <FaqPage
+          />
+          <SupportTicketsPage />
 
       </main>
     </div>
