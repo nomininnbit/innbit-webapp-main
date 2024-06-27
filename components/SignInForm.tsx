@@ -20,7 +20,8 @@ const SignInForm: React.FC = () => {
         <div className="flex justify-center mb-4">
           <Link href="/" className="cursor-pointer">
             <Image
-              src={'/icons/innbitLogo.svg'} alt="Innbit Logo"
+              src={"/icons/innbitLogo.svg"}
+              alt="Innbit Logo"
               width={200}
               height={30}
             />
@@ -32,7 +33,9 @@ const SignInForm: React.FC = () => {
         <form className="space-y-4" onSubmit={handleLogin}>
           <div className="rounded-lg shadow-sm">
             <div>
-              <label htmlFor="email" className="sr-only">Email address</label>
+              <label htmlFor="email" className="sr-only">
+                Email address
+              </label>
               <input
                 id="email"
                 name="email"
@@ -41,12 +44,14 @@ const SignInForm: React.FC = () => {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+                className="relative block w-full px-3 py-2 border border-gray-200 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
                 placeholder="Email address"
               />
             </div>
             <div className="mt-4">
-              <label htmlFor="password" className="sr-only">Password</label>
+              <label htmlFor="password" className="sr-only">
+                Password
+              </label>
               <input
                 id="password"
                 name="password"
@@ -55,7 +60,7 @@ const SignInForm: React.FC = () => {
                 required
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+                className="relative block w-full px-3 py-2 border border-gray-200 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
                 placeholder="Password"
               />
             </div>
@@ -74,7 +79,7 @@ const SignInForm: React.FC = () => {
             </a>
           </div>
           <div className="text-sm text-center">
-            Need an account?{' '}
+            Need an account?{" "}
             <a href="/sign-up" className="text-blue-600 hover:underline ml-1">
               Register
             </a>

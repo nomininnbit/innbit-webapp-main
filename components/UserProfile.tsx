@@ -33,7 +33,7 @@ const InputField: React.FC<InputFieldProps> = ({ label, name, value, onChange, d
         value={value}
         onChange={onChange}
         disabled={disabled}
-        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-innbitRed focus:border-innbitRed sm:text-sm"
+        className="mt-1 block w-full px-3 py-2 border border-gray-200 rounded-md focus:outline-none focus:ring-innbitRed focus:border-innbitRed sm:text-sm"
       />
     </div>
   );

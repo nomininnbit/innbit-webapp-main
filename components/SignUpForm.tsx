@@ -23,7 +23,8 @@ const SignUpForm: React.FC = () => {
         <div className="flex justify-center mb-4">
           <Link href="/" className="cursor-pointer">
             <Image
-              src={'/icons/innbitLogo.svg'} alt="Innbit Logo"
+              src={"/icons/innbitLogo.svg"}
+              alt="Innbit Logo"
               width={200}
               height={30}
             />
@@ -35,7 +36,9 @@ const SignUpForm: React.FC = () => {
         <form className="space-y-4" onSubmit={handleSignUp}>
           {/* Existing input fields */}
           <div>
-            <label htmlFor="firstName" className="sr-only">First Name</label>
+            <label htmlFor="firstName" className="sr-only">
+              First Name
+            </label>
             <input
               id="firstName"
               name="firstName"
@@ -43,12 +46,14 @@ const SignUpForm: React.FC = () => {
               required
               value={firstName}
               onChange={(e) => setFirstName(e.target.value)}
-              className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+              className="relative block w-full px-3 py-2 border border-gray-200 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
               placeholder="First Name"
             />
           </div>
           <div className="mt-4">
-            <label htmlFor="lastName" className="sr-only">Last Name</label>
+            <label htmlFor="lastName" className="sr-only">
+              Last Name
+            </label>
             <input
               id="lastName"
               name="lastName"
@@ -56,12 +61,14 @@ const SignUpForm: React.FC = () => {
               required
               value={lastName}
               onChange={(e) => setLastName(e.target.value)}
-              className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+              className="relative block w-full px-3 py-2 border border-gray-200 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
               placeholder="Last Name"
             />
           </div>
           <div className="mt-4">
-            <label htmlFor="email" className="sr-only">Email address</label>
+            <label htmlFor="email" className="sr-only">
+              Email address
+            </label>
             <input
               id="email"
               name="email"
@@ -70,12 +77,14 @@ const SignUpForm: React.FC = () => {
               required
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+              className="relative block w-full px-3 py-2 border border-gray-200 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
               placeholder="Email address"
             />
           </div>
           <div className="mt-4">
-            <label htmlFor="password" className="sr-only">Password</label>
+            <label htmlFor="password" className="sr-only">
+              Password
+            </label>
             <input
               id="password"
               name="password"
@@ -84,7 +93,7 @@ const SignUpForm: React.FC = () => {
               required
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
+              className="relative block w-full px-3 py-2 border border-gray-200 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
               placeholder="Password"
             />
           </div>
@@ -96,7 +105,7 @@ const SignUpForm: React.FC = () => {
               type="checkbox"
               checked={agreeToTerms}
               onChange={(e) => setAgreeToTerms(e.target.checked)}
-              className="w-4 h-4 text-red-600 border-gray-300 rounded focus:ring-red-500"
+              className="w-4 h-4 text-red-600 border-gray-200 rounded focus:ring-red-500"
             />
             <label htmlFor="terms" className="ml-2 block text-sm text-gray-900">
               By checking this box, you are agreeing to our terms of service.
@@ -111,7 +120,7 @@ const SignUpForm: React.FC = () => {
             </button>
           </div>
           <div className="text-sm text-center">
-            Already have an account?{' '}
+            Already have an account?{" "}
             <Link href="/sign-in" className="text-blue-600 hover:underline">
               Login
             </Link>
