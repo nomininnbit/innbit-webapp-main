@@ -1,17 +1,16 @@
-"use client"
+"use client";
 
 // components/SignInForm.tsx
-import React, { useState } from 'react';
-import Link from 'next/link';
-import Image from 'next/image';
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const SignInForm: React.FC = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle login logic here
   };
 
   return (
@@ -48,43 +47,20 @@ const SignInForm: React.FC = () => {
                 placeholder="Email address"
               />
             </div>
-            <div className="mt-4">
-              <label htmlFor="password" className="sr-only">
-                Password
-              </label>
-              <input
-                id="password"
-                name="password"
-                type="password"
-                autoComplete="current-password"
-                required
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                className="relative block w-full px-3 py-2 border border-gray-200 placeholder-gray-500 rounded-md focus:outline-none focus:ring-red-500 focus:border-red-500 focus:z-10 sm:text-sm"
-                placeholder="Password"
-              />
-            </div>
           </div>
           <div>
             <button
               type="submit"
               className="w-full px-4 py-2 text-sm font-medium text-white bg-red-600 border border-transparent rounded-md shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
             >
-              Login
+              Reset Password
             </button>
           </div>
+
           <div className="text-sm text-center pt-4">
-            <a
-              href="/password-reset"
-              className="text-center text-blue-600 hover:underline"
-            >
-              Forgot your password?
-            </a>
-          </div>
-          <div className="text-sm text-center">
-            Need an account?{" "}
-            <a href="/sign-up" className="text-blue-600 hover:underline ml-1">
-              Register
+            Already have an account?{" "}
+            <a href="/sign-in" className="text-blue-600 hover:underline ml-1">
+              Sign in
             </a>
           </div>
         </form>

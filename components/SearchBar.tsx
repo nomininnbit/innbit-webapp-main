@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 
 const SearchBar = () => {
   return (
@@ -8,10 +9,15 @@ const SearchBar = () => {
       <input
         type="text"
         placeholder="Search..."
-        className="flex-1 bg-transparent outline-none"
+        className="flex-1 bg-transparent outline-none text-xs"
       />
-      <button type="submit" className="cursor-pointer hover:bg-gray-100">
-        Search
+      <button type="submit" className="cursor-pointer hover:shadow-md">
+        <Image
+          src={"/icons/search.svg"}
+          alt={"Search Icon"}
+          width={20}
+          height={20}
+        />
       </button>
     </form>
   );

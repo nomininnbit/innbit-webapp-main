@@ -1,6 +1,5 @@
 "use client"
 
-// components/SignUpForm.tsx
 import React, { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -10,7 +9,7 @@ const SignUpForm: React.FC = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [agreeToTerms, setAgreeToTerms] = useState(false); // State for the checkbox
+  const [agreeToTerms, setAgreeToTerms] = useState(false);
 
   const handleSignUp = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,7 +33,6 @@ const SignUpForm: React.FC = () => {
           Join Our Flexible IoT Product Tracking Platform
         </h2>
         <form className="space-y-4" onSubmit={handleSignUp}>
-          {/* Existing input fields */}
           <div>
             <label htmlFor="firstName" className="sr-only">
               First Name
@@ -119,7 +117,7 @@ const SignUpForm: React.FC = () => {
               Register
             </button>
           </div>
-          <div className="text-sm text-center">
+          <div className="text-sm text-center pt-4">
             Already have an account?{" "}
             <Link href="/sign-in" className="text-blue-600 hover:underline">
               Login
