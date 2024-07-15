@@ -1,7 +1,7 @@
-// pages/products/[productId].tsx
 import { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { GetServerSidePropsContext } from "next";
 
 interface SingleProductProps {
   productName: string;
@@ -66,9 +66,10 @@ const SingleProductPage: NextPage<SingleProductProps> = ({
 };
 
 // Data fetching logic moved outside the component
-export async function getServerSideProps(context: {
-  params: { productId: string };
-}) {
+export async function getServerSideProps(context: GetServerSidePropsContext) {
+  const { productId } = context.params as { productId: string };
+}
+{
   const { productId } = context.params as { productId: string };
 
   // Replace with your actual API call
@@ -77,7 +78,7 @@ export async function getServerSideProps(context: {
 
   return {
     props: {
-      product, // Return fetched product data within "props"
+      product,
     },
   };
 }
