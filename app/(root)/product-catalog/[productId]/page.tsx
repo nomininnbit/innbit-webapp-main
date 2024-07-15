@@ -1,7 +1,6 @@
 import { NextPage } from "next";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { GetServerSidePropsContext } from "next";
 
 interface SingleProductProps {
   productName: string;
@@ -66,7 +65,9 @@ const SingleProductPage: NextPage<SingleProductProps> = ({
 };
 
 // Data fetching logic moved outside the component
-export async function getServerSideProps(context: GetServerSidePropsContext) {
+export async function getStaticProps(context: {
+  params: { productId: string };
+}) {
   const { productId } = context.params as { productId: string };
   // Replace with your actual API call
   const res = await fetch(`YOUR_API_ENDPOINT/${productId}`);
