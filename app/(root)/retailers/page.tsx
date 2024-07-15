@@ -15,7 +15,7 @@ const retailers = [
     phone: "+43 512 205420",
     address: "Florianistraße 3, 6063 Rum, Austria",
     website: "http://www.metasys.com",
-    logo: "/img/metasys-logo.png", // Replace with actual logo URL
+    logo: "/img/metasys-logo.png",
     bgColor: "#FF0000",
   },
   {
@@ -27,8 +27,8 @@ const retailers = [
     phone: "+39 02 9019180",
     address: "20081 ABBIATEGRASSO (MI) - ITALY, VIA PASCOLI, 15",
     website: "http://www.mgfcompressors.it",
-    logo: "/mgf-logo.png", // Replace with actual logo URL
-    bgColor: "#CCCCCC", // Example background color
+    logo: "/img/noImage.png",
+    bgColor: "#CCCCCC",
   },
   {
     name: "ULTRADENT",
@@ -39,8 +39,8 @@ const retailers = [
     phone: "+49 89 420-992-60",
     address: "Eugen-Sänger-Ring 10 D-85649 Brunnthal",
     website: "http://www.ultradent.de",
-    logo: "/ultradent-logo.png", // Replace with actual logo URL
-    bgColor: "#0000FF", // Example background color
+    logo: "/img/noImage.png",
+    bgColor: "#0000FF",
   },
 ];
 

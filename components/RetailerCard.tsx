@@ -24,7 +24,7 @@ const RetailerCard: React.FC<RetailerCardProps> = ({ retailer }) => {
       <div className="p-4" style={{ backgroundColor: retailer.bgColor }}>
         <img
           className="h-25 mx-auto rounded overflow-hidden object-fill object-center"
-          src={retailer.logo}
+          src={retailer.logo ? retailer.logo : "/img/noImage.png"}
           alt={`${retailer.name} logo`}
         />
       </div>
