@@ -68,15 +68,12 @@ const SingleProductPage: NextPage<SingleProductProps> = ({
 // Data fetching logic moved outside the component
 export async function getServerSideProps(context: GetServerSidePropsContext) {
   const { productId } = context.params as { productId: string };
-}
-{
-  const { productId } = context.params as { productId: string };
-
   // Replace with your actual API call
   const res = await fetch(`YOUR_API_ENDPOINT/${productId}`);
   const product = await res.json();
 
   return {
+    // Remove the extra comma here
     props: {
       product,
     },
